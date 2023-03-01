@@ -5,9 +5,8 @@ print("Playlist Storage Program\n")
 start = int(input("1. Start Program\n2. Quit\n>> "))
 
 def store_song(count, playlist):
-    for count in playlist:
-        output = "|".join(count.values())
-        file.write(f"{output}\n")
+    output = "\n".join(["|".join(song.values()) for song in playlist])
+    file.write(f"{output}\n")
 
 if start == 1:
     amount = int(input("\nHow many songs would you like to enter?\n>> "))
